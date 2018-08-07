@@ -1,0 +1,141 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+}
+
+.titulo {
+    font-family: 'Roboto', "Times New Roman", "Agency FB", serif;
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
+    color: #FEF9F9;
+}
+
+.box-menu {
+    background-color: #828282;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 100%;
+    width: 200px;
+}
+
+.box-menu .dados-cliente {
+    text-align: center;
+    border-bottom: 1px solid #FFF9F9;
+    margin-bottom: 20px;
+
+}
+
+.box-menu .dados-cliente i {
+    font-size: 80px;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.box-menu .dados-cliente i.F {
+    font-size: 60px;
+    color: red;
+}
+
+.box-menu .dados-cliente i.M {
+    font-size: 60px;
+    color: blue;
+}
+
+.box-menu .dados-cliente .descricao-cliente {
+    font-family: 'Roboto', "Times New Roman", "Agency FB", serif;
+    font-style: inherit;
+    font-size: 14px;
+    text-align: left;
+    padding-left: 2%;
+    margin: 0 0 0 0;
+    color: #FEF9F9;
+}
+
+.box-menu .conjunto-botao {
+    text-align: center;
+    border-bottom: 1px solid #FFF9F9;
+    margin-bottom: 10px;
+}
+
+.box-menu .conjunto-botao .btn-menu {
+    font-family: 'Roboto', "Times New Roman", "Agency FB", serif;
+    position: relative;
+    margin: 0 0 9px 0;
+    width: 72%;
+}
+
+.box-menu .manchester {
+    text-align: right;
+}
+.seta-esquerda:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 24px;
+    width: 2px;
+    height: 0;
+    border-right: 34px solid;
+    border-top: 14px solid transparent;
+    border-bottom: 16px solid transparent;
+    float: left;
+}
+
+.box-menu .manchester .btn-triagem{
+    font-family: 'Roboto', "Times New Roman", "Agency FB", serif;
+    width: calc(100% - 58px);
+    height: 30px;
+    margin-bottom: 2px;
+    box-shadow: 0 !important;
+}
+
+
+html body .container-principal {
+    width: calc(100% - 200px);
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: stretch;
+}
+
+html body .container-principal .box-top {
+    background-color: #828282;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.25);
+    height: 50px;
+    width: 100%;
+}
+
+html body .container-principal .box-conteudo {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 200px;
+    overflow: auto;
+    overflow-scrolling: auto;
+    margin: 0;
+    background-color: #ffffff;
+    height: 100%;
+}
+
+/*Alterando Scroll*/
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: lightgray;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: gray;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: gray;
+    opacity: 0.8;
+}

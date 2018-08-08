@@ -1,7 +1,11 @@
-@extends('template.index') 
+@extends('template.index')
+
+@section('identificador')
+        <h5 style="color: white;">HISTORICO</h5>
+@endsection
+
 @section('content')
 <div class="container ">
-  <h1>{{$titulo or 'Formulario'}}</h1>
   <table class="table-striped">
     <tr>
       <th>Data</th>

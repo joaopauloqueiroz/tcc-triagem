@@ -59,7 +59,8 @@
 
     <div class="container-principal" style="float: right">
         <div class="box-top">
-
+            <center>@yield('identificador')</center>
+            
         </div>
         <div class="box-conteudo">
           @yield('content')

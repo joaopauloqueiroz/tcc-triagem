@@ -16,7 +16,8 @@ class CreateExamesTable extends Migration
         Schema::create('exames', function (Blueprint $table) {
             $table->increments('id');
             $table->text('queixa');
-            $table->text('alergias')->nullable();
+            $table->text('alergias');
+            $table->string('urgencia', 45);
             $table->boolean('cardiopatia');
             $table->boolean('has');
             $table->boolean('pneupatia');
@@ -33,18 +34,21 @@ class CreateExamesTable extends Migration
             $table->boolean('desmaio_convulsoes');
             $table->boolean('ferida');
             $table->boolean('processo_alergico');
-            $table->float('pa', 3, 2);
-            $table->float('fc', 3, 2);
+            $table->float('pa1', 5, 2);
+            $table->float('pa2', 5, 2);
+            $table->float('fc', 5, 2);
             $table->float('temperatura', 8, 2);
-            $table->float('sat', 3, 2);
+            $table->float('sat', 5, 2);
             $table->integer('fr');
+            $table->integer('pacient_id')->unsigned();
+            $table->integer('user_id')->unsigned();
+            $table->integer('prot_id')->unsigned();
             //chave estrangeira que referencia a tabela de pacientes
             $table->foreign('pacient_id')->references('id')->on('pacients');
             //chave estrangeira para referenciar quem fez o processo de triagem
             $table->foreign('user_id')->references('id')->on('users');
             //chave estrangeira que referencia o protocolo
             $table->foreign('prot_id')->references('id')->on('protocols');
-            
             $table->timestamps();
         });
     }

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\Pacientes\Pacient;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +12,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        //$this->call(UsersTableSeeder::class);
+        //$this->call(UserSeeder::class);
+        $this->call(ExameSeeder::class);
+        ///$this->call(ProtocolSeeder::class);
+        //$this->call(PacientSeeder::class);
     }
 }

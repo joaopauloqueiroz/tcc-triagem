@@ -7,7 +7,34 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Pacient extends Model
 {
-    //fillable
+    protected $fillable = [
+        'name',
+        'rg',
+        'emissor',
+        'cpf',
+        'cns',
+        'pis',
+        'sexo',
+        'estado_civil',
+        'profissao',
+        'data_nacimento',
+        'name_mae',
+        'name_pai',
+        'cep',
+        'rua',
+        'bairro',
+        'tp_logradouro',
+        'logradouro',
+        'cidade',
+        'numero',
+        'complemento',
+        'estado',
+        'celuar',
+        'telefone',
+        'email',
+        'user_id',
+        'exame_id'
+    ];
 
     /**
      * metodo de relacionamento de 1 para muitos, ou seja de um pacient
@@ -17,6 +44,6 @@ class Pacient extends Model
 
     public function exames()
     {
-        return HasMany('App\Models\Exames\Exame');
+        return $this->hasMany('App\Models\Exames\Exame');
     }
 }

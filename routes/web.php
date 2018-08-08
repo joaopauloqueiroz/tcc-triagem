@@ -15,7 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/template', function () {
-    $titulo = 'Formulario de atendimento do paciente';
-    return view('forms.form_pacient', compact('titulo'));
-});
+Route::get('/pacientes', 'Pacientes\PacientsController@exames')->name('pacients.index');
+Route::get('/pacientes/exames/{exame}', 'Pacientes\PacientsController@exames')->name('exames.index');

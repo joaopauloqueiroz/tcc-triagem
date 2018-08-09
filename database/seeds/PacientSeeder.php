@@ -35,8 +35,7 @@ class PacientSeeder extends Seeder
         'celuar' => '11995096974',
         'telefone' => '1129376604',
         'email' => 'teste@teste.com',
-        'user_id' => '1',
-        'exame_id' => '1'
+        'user_id' => '1'
         ]);
     }
 }

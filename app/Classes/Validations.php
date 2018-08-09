@@ -19,4 +19,21 @@ class Validations
 
         return $idade;
     }
+    /**
+     * decidir a cor da Barra lateral
+     *
+     * @param [type] $color
+     * @return void
+     */
+    public static function setColor($color)
+    {
+        if (strtoupper($color) == 'NãO URGENTE') {
+            $color = '#2f80ed';
+        } elseif (strtoupper($color) == 'POUCO URGENTE') {
+            $color = '#219653';
+        } elseif (strtoupper($color) == 'EMERGÊNCIA') {
+            $color = '#F70000';
+        }
+        return $color;
+    }
 }

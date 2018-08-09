@@ -13,7 +13,7 @@ class ExameSeeder extends Seeder
     public function run()
     {
         Exame::insert([
-        'queixa' => 'Dores no corpo, febre alta',
+        'queixa' => 'Eta gripado e com dor de estomogo',
         'alergias' => 'Nenhuma alergia',
         'urgencia' => 'Não Urgente',
         'cardiopatia' => '0',
@@ -39,8 +39,8 @@ class ExameSeeder extends Seeder
         'sat' => 3.25,
         'fr' => 150,
         'pacient_id' => 1,
-        'user_id' => 2,
-        'prot_id' => 2
+        'user_id' => 1,
+        'prot_id' => 1
         ]);
     }
 }

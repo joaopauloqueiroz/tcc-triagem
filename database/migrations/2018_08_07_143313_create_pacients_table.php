@@ -40,11 +40,11 @@ class CreatePacientsTable extends Migration
             $table->string('telefone', 11)->nullable();
             $table->string('email', 45)->nullable();
             $table->integer('user_id')->unsigned();
-            $table->integer('exame_id')->unsigned();
+            //$table->integer('exame_id')->unsigned();
             //chave estrangeira que referencia a tabela de usuario, para saber quem fez o cadastro
             $table->foreign('user_id')->references('id')->on('users');
             //chave estrangeira para referenciar um exame
-            $table->foreign('exame_id')->references('id')->on('exames');
+            //$table->foreign('exame_id')->references('id')->on('exames');
 
             $table->timestamps();
         });

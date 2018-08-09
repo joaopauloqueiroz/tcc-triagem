@@ -32,8 +32,7 @@ class Pacient extends Model
         'celuar',
         'telefone',
         'email',
-        'user_id',
-        'exame_id'
+        'user_id'
     ];
 
     /**
@@ -44,6 +43,6 @@ class Pacient extends Model
 
     public function exames()
     {
-        return $this->hasMany('App\Models\Exames\Exame');
+        return $this->hasMany('App\Models\Exames\Exame')->orderBy('created_at');
     }
 }

@@ -13,7 +13,7 @@ class ProtocolSeeder extends Seeder
     public function run()
     {
         Protocol::insert([
-            'name' => 'IAM'
+            'name' => 'VCI'
         ]);
     }
 }

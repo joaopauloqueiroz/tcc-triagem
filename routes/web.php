@@ -10,10 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/pacientes', 'Pacientes\PacientsController@exames')->name('pacients.index');
-Route::get('/pacientes/exames/{exame}', 'Pacientes\PacientsController@exames')->name('exames.index');
+Route::get('/', 'Pacientes\PacientsController@index')->name('pacients.index');
+//rota para listar um exame apenas
+Route::get('/pacientes/exame/{id}', 'Pacientes\PacientsController@show')->name('pacients.show');

@@ -41,11 +41,11 @@ class Exame extends Model
 
     public function protocolos()
     {
-        return $this->hasOne('App\Models\Protocolos\Protocol', 'id');
+        return $this->hasOne('App\Models\Protocolos\Protocol', 'id', 'prot_id');
     }
 
     public function pacients()
     {
-        return $this->hasOne('App\Models\Pacientes\Pacient');
+        return $this->hasOne('App\Models\Pacientes\Pacient', 'id', 'pacient_id');
     }
 }

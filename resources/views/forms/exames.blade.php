@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+{{dd($exame->exames)}}
 <div class="container ">
   <table class="table-striped">
     <tr>
@@ -26,9 +27,11 @@
         <td>{{$exams->fc}}</td>
         <td>{{$exams->temperatura}}</td>
         <td>{{$exams->fr}}</td>
-        <td><a href="">VISUALIZAR</a></td>
+        <td><a href="{{route('pacientes.exames', $exams->id)}}">VISUALIZAR</a></td>
       </tr>
     @endforeach
+
+    
   </table>
 </div>
 @endsection

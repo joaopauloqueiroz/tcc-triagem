@@ -8,6 +8,7 @@ use App\Models\Pacientes\Pacient;
 use App\Models\Exames\Exame;
 use App\Classes\Validations;
 
+//
 class PacientsController extends Controller
 {
     protected $pacient;
@@ -18,22 +19,22 @@ class PacientsController extends Controller
 
     public function index()
     {
-        $pacientes = $this->pacient->fid(1);
-        $idade = Validations::getIdade($pacientes->data_nacimento);
-        $titulo = 'Listagem de dados do paciente';
-        return view('forms.form_pacient', compact('titulo', 'pacientes', 'idade'));
+        $paciente = $this->pacient->find(1);
+        $idade = Validations::getIdade($paciente->data_nacimento);
+        return view('home.index', compact('paciente', 'idade'));
     }
 
-    public function listar()
+    public function show($id)
     {
-        $pac = $this->pacient->find(1);
-        return $pac;
-    }
-
-    public function exames(Exame $exame)
-    {
-        $titulo = "Historico";
-        $exame = $exame->get();
-        return view('forms.exames', compact('exame', 'titulo'));
+        $exame = Exame::find($id);
+        
+        if ($exame) {
+            $paciente = $exame->pacients;
+            $idade = Validations::getIdade($paciente->data_nacimento);
+            $color = Validations::setColor($exame->urgencia);
+            return view('exame.index', compact('paciente', 'exame', 'idade', 'color'));
+        } else {
+            return "Exame não encontrado";
+        }
     }
 }
